@@ -11,7 +11,7 @@ export class EmployeeDetailComponent {
   id: Observable<string>;
 
   constructor(route: ActivatedRoute) {
-    console.log('Creating new instance of NameComponent');
+    console.log('Creating new instance of EmployeeDetailComponent');
     this.id = route.params.pipe(
       tap(params => console.log('Got new value for params', params)),
       map(params => params['employeeId']));
