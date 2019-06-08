@@ -12,8 +12,16 @@ export class EmployeeDetailComponent {
 
   constructor(route: ActivatedRoute) {
     console.log('Creating new instance of EmployeeDetailComponent');
-    this.id = route.params.pipe(
-      tap(params => console.log('Got new value for params', params)),
-      map(params => params['employeeId']));
+    this.id = route.paramMap.pipe(
+      tap(params =>
+        console.log(
+          'Got new value for param',
+          params.get('employeeId')
+        )
+      ),
+      // The only time employeeId would not be defined would be if the developer creates a typo in 'employeeId'
+      // OK to assert that the result is a string
+      map(params => params.get('employeeId') as string)
+    );
   }
 }
