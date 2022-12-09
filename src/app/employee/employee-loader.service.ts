@@ -26,7 +26,7 @@ export class EmployeeLoader {
       .pipe(map(longList => longList.slice(0, 9)));
   }
 
-  getDetails(employeeId: number): Observable<Employee> {
+  getDetails(employeeId: string | number): Observable<Employee> {
     return this.http.get<Employee>(
       `${apiUrl}/employees/${employeeId}`
     );
