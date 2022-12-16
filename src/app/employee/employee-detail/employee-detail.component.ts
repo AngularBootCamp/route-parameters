@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, share, switchMap } from 'rxjs/operators';
+import { Observable, map, share, switchMap } from 'rxjs';
 
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
