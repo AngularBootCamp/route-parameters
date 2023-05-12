@@ -5,7 +5,7 @@ import { Observable, map, share, switchMap } from 'rxjs';
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
-  selector: 'employee-detail',
+  selector: 'app-employee-detail',
   templateUrl: './employee-detail.component.html'
 })
 export class EmployeeDetailComponent {
