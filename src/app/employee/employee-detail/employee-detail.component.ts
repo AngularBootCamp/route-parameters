@@ -1,14 +1,17 @@
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, map, share, switchMap } from 'rxjs';
 
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
   selector: 'app-employee-detail',
-  templateUrl: './employee-detail.component.html'
+  templateUrl: './employee-detail.component.html',
+  standalone: true,
+  imports: [RouterLink, AsyncPipe]
 })
-export class EmployeeDetailComponent {
+export default class EmployeeDetailComponent {
   employee: Observable<Employee>;
 
   constructor(route: ActivatedRoute, loader: EmployeeLoader) {
