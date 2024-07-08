@@ -1,4 +1,4 @@
-import { NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { Employee, EmployeeLoader } from '../employee-loader.service';
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
   standalone: true,
-  imports: [NgFor, RouterLink, AsyncPipe]
+  imports: [RouterLink, AsyncPipe]
 })
 export default class EmployeeListComponent {
   list: Observable<Employee[]>;
