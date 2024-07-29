@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-const routes: Routes = [
+const employeeRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
@@ -13,4 +13,4 @@ const routes: Routes = [
   }
 ];
 
-export default routes;
+export default employeeRoutes;
